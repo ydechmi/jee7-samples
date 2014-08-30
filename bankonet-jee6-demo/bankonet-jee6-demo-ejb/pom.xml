@@ -13,7 +13,7 @@
     <name>bankonet-jee6-demo-ejb</name>
 
     <build>
-        <finalName>${artifactId}</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -22,9 +22,9 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
-                    <compilerArguments>
+                    <!--  <compilerArguments>
                         <endorseddirs>${endorsed.dir}</endorseddirs>
-                    </compilerArguments>
+                    </compilerArguments>-->
                 </configuration>
             </plugin>
             <plugin>
