@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+        <artifactId>bankonet-jee6-demo</artifactId>
+        <groupId>com.sqli.bankonet</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+  <artifactId>bankonet-jee6-demo-ear</artifactId>
+
+  <packaging>ear</packaging>
+
+  <name>bankonet-jee6-demo-ear</name>
+
+  <build>
+  	 <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+            <version>6</version>
+            <generateApplicationXml>false</generateApplicationXml>
+            <defaultLibBundleDir>APP-INF/lib</defaultLibBundleDir>
+           <modules>
+           	  <webModule>
+           	  	<groupId>com.sqli.bankonet</groupId>
+      			<artifactId>bankonet-jee6-demo-web</artifactId>
+      			<bundleFileName>bankonet-jee6-demo-web.war</bundleFileName>
+           	  </webModule>
+           	  <ejbModule>
+           	  	<groupId>com.sqli.bankonet</groupId>
+      			<artifactId>bankonet-jee6-demo-ejb</artifactId>
+      			<bundleFileName>bankonet-jee6-demo-ejb.jar</bundleFileName>
+           	  </ejbModule>
+           </modules>
+        </configuration>
+      </plugin>
+      			<!-- JBoss AS 7.x.x plugin for command line deployment -->
+			<plugin>
+				<groupId>org.jboss.as.plugins</groupId>
+				<artifactId>jboss-as-maven-plugin</artifactId>
+				<version>7.3.Final</version>
+				<executions>
+					<execution>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sqli.bankonet</groupId>
+  		<artifactId>bankonet-jee6-demo-web</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<type>war</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.sqli.bankonet</groupId>
+  		<artifactId>bankonet-jee6-demo-ejb</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<type>ejb</type>
+  	</dependency>
+  </dependencies>
+</project>
