@@ -4,7 +4,7 @@
   <module>
     <web>
       <web-uri>bankonet-jee6-demo-web.war</web-uri>
-      <context-root>/bankonet-jee6-demo-web</context-root>
+      <context-root>/bankonet-jee6-demo</context-root>
     </web>
   </module>
   <module>
