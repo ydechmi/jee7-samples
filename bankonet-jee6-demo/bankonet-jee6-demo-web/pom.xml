@@ -8,6 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+
     <artifactId>bankonet-jee6-demo-web</artifactId>
     <packaging>war</packaging>
     <name>bankonet-jee6-demo-web</name>
@@ -27,6 +28,7 @@
             <groupId>com.sqli.bankonet</groupId>
             <artifactId>bankonet-jee6-demo-domaine</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

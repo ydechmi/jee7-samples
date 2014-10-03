@@ -50,6 +50,7 @@
             <groupId>com.sqli.bankonet</groupId>
             <artifactId>bankonet-jee6-demo-domaine</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
