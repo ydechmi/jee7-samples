@@ -25,6 +25,11 @@
     <dependencies>
 
         <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.sqli.bankonet</groupId>
             <artifactId>bankonet-jee6-demo-domaine</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -34,9 +39,12 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>3.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
         <!-- to test with TomEE and Arquillian
         <dependency>
           <groupId>org.apache.openejb</groupId>

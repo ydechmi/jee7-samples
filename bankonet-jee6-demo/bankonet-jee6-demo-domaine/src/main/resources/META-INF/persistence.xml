@@ -3,7 +3,7 @@
 	<persistence-unit name="bankonet" transaction-type="JTA">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		
-		<jta-data-source>java:jboss/datasources/BankonetDS</jta-data-source>
+		<jta-data-source>java:/jdbc/BankonetDB</jta-data-source>
 		<!-- <non-jta-data-source>jdbc/BankonetDS</non-jta-data-source>-->
 		<class>com.sqli.bankonet.domaine.compte.Compte</class>
 		<class>com.sqli.bankonet.domaine.compte.CompteCourant</class>
