@@ -53,5 +53,17 @@
         <version>4.12</version>
       </dependency>
     </dependencies>
-  </dependencyManagement>
+   </dependencyManagement>
+      <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>release</name>
+            <url>http://docker-server:32769/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>snapshot</name>
+            <url>http://docker-server:32769/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

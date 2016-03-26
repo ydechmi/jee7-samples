@@ -1,3 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-jee7-samples.iml
-ejb-standalone-sample/ejb-standalone-sample.iml
+/.idea/
+*.iml
+*/target
